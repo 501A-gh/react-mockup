@@ -1,10 +1,18 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-mockup'
+import { MobileMockup, BrowserMockup } from 'react-mockup'
 import 'react-mockup/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <>
+      <MobileMockup
+        size="1"
+        src="" />
+      <BrowserMockup
+        src="" />
+    </>
+  )
 }
 
 export default App

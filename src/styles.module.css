@@ -1,9 +1,78 @@
 /* add css module styles here (optional) */
+:root{
+  --grey0:rgb(245, 245, 245);
+  --grey1:rgb(214, 214, 214);
+  --grey2:rgb(201, 201, 201);
+}
 
-.test {
+.browser{
   margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px var(--grey2);
+  height: min-content;
+}
+.browserHeader{
+  border-radius: 10px 10px 0px 0px;
+  background-color: var(--grey1);
+  height: 35px;
+  width: auto;
+  display: flex;
+  align-items:center;
+  border-bottom: 1px solid rgb(172, 172, 172);
+}
+.browserHeader div{
+  border-radius:50px;
+  width:15px;
+  height:15px;
+  margin-left: 10px;
+  background-color: grey;
+}
+
+.browser img{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.iphone1 img{
+  border: 0.15em solid var(--grey1);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.iphone1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 30px;
+  /* height: 50px;
+  width: 20px; */
+  margin: 2em;
+  height: fit-content;
+  width: fit-content;
+  padding: 0 0.5em 0 0.5em;
+  background-color: white;
+  box-shadow: 0px 0px 15px var(--grey2);
+  /* transform: rotateX(50deg) rotateZ(20deg); */
+}
+.iphone1 img{
+  border: 0.15em solid var(--grey1);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.iphone1 .speakerGrill{
+  margin: 1.7em auto;
+  height: 0.3em;
+  width: 3em;
+  border-radius:50px;
+  background-color:var(--grey1);
+}
+.iphone1 .homeButton{
+  margin: 0.7em auto;
+  height: 2em;
+  width: 2em;
+  border: 0.15em solid var(--grey1);
+  border-radius:50px;
+  background-color:var(--grey0);
 }

@@ -13,15 +13,21 @@ npm install --save react-mockup
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { MobileMockup } from 'react'
 
-import MyComponent from 'react-mockup'
+import MobileMockup from 'react-mockup'
 import 'react-mockup/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+function Component {
+  return(
+    <>
+      <MobileMockup
+        size="1"
+        src="" />
+      <BrowserMockup
+        src="" />
+    </>
+  )
 }
 ```
 
