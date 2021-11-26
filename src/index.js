@@ -11,11 +11,12 @@ const MobileMockup = ({ src, size }) => {
     </div>
   )
 };
-const BrowserMockup = ({ src }) => {
+
+const BrowserMockup = ({ src, color, type, angleX, angleY }) => {
   return (
     <div
-      className={styles.browser}>
-      <div className={styles.browserHeader}>
+      className={`${styles.browser} ${styles[type]}`} style={{transform: `perspective(200px) rotateX(${angleX}) rotateY(${angleY})`}}>
+      <div className={styles.browserHeader} style={{backgroundColor:`${color}`}}>
         <div></div>
         <div></div>
         <div></div>

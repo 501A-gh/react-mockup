@@ -10,7 +10,12 @@ const App = () => {
         size="1"
         src="" />
       <BrowserMockup
-        src="" />
+        src=""
+        type=""
+        angleX="5deg"
+        angleY="10deg"
+        color="white"
+      />
     </>
   )
 }

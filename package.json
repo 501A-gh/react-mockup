@@ -1,10 +1,13 @@
 {
   "name": "react-mockup",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Create mockups with a single react component",
   "author": "",
   "license": "MIT",
-  "repository": "/react-mockup",
+  "repository": {
+    "type": "git",
+    "url": "/react-mockup"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -49,5 +52,12 @@
   },
   "files": [
     "dist"
+  ],
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {},
+  "keywords": [
+    "react"
   ]
 }

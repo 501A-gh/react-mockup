@@ -1,44 +1,60 @@
 /* add css module styles here (optional) */
-:root{
-  --grey0:rgb(245, 245, 245);
-  --grey1:rgb(214, 214, 214);
-  --grey2:rgb(201, 201, 201);
+:root {
+  --grey0: rgb(245, 245, 245);
+  --grey1: rgb(214, 214, 214);
+  --grey2: rgb(201, 201, 201);
 }
 
-.browser{
+.browser {
   margin: 2em;
   border-radius: 10px;
   box-shadow: 0px 5px 15px var(--grey2);
   height: min-content;
 }
-.browserHeader{
-  border-radius: 10px 10px 0px 0px;
-  background-color: var(--grey1);
-  height: 35px;
-  width: auto;
-  display: flex;
-  align-items:center;
-  border-bottom: 1px solid rgb(172, 172, 172);
-}
-.browserHeader div{
-  border-radius:50px;
-  width:15px;
-  height:15px;
-  margin-left: 10px;
-  background-color: grey;
-}
-
-.browser img{
+.browser img {
   padding: 0;
   margin: 0;
   width: 100%;
   border-radius: 0px 0px 10px 10px;
 }
 
-.iphone1 img{
+.browserHeader {
+  border-radius: 10px 10px 0px 0px;
+  background-color: var(--grey1);
+  height: 35px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(172, 172, 172);
+}
+.browserHeader div {
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-color: grey;
+}
+
+/* types */
+.mac .browserHeader div:first-child {
+  background-color: #ff605c;
+}
+.mac .browserHeader div {
+  background-color: #ffbd44;
+}
+.mac .browserHeader div:last-child {
+  background-color: #00ca4e;
+}
+
+.outline .browserHeader div {
+  border: 2px solid grey;
+  background-color: transparent;
+}
+
+.iphone1 img {
   border: 0.15em solid var(--grey1);
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .iphone1 {
@@ -54,25 +70,25 @@
   padding: 0 0.5em 0 0.5em;
   background-color: white;
   box-shadow: 0px 0px 15px var(--grey2);
-  /* transform: rotateX(50deg) rotateZ(20deg); */
+  /*  */
 }
-.iphone1 img{
+.iphone1 img {
   border: 0.15em solid var(--grey1);
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-.iphone1 .speakerGrill{
+.iphone1 .speakerGrill {
   margin: 1.7em auto;
   height: 0.3em;
   width: 3em;
-  border-radius:50px;
-  background-color:var(--grey1);
+  border-radius: 50px;
+  background-color: var(--grey1);
 }
-.iphone1 .homeButton{
+.iphone1 .homeButton {
   margin: 0.7em auto;
   height: 2em;
   width: 2em;
   border: 0.15em solid var(--grey1);
-  border-radius:50px;
-  background-color:var(--grey0);
+  border-radius: 50px;
+  background-color: var(--grey0);
 }
