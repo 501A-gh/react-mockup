@@ -24,7 +24,12 @@ function Component {
       // Displays image in a mobile device frame
       <MobileMockup
         size="1"
-        src="" />
+        src=""
+        angleX=""
+        angleY=""
+        shadow=""
+        border=""
+      />
 
       // Displays image in a browser device frame
       // Their are 2 styles you could insert in the `types=""`, `mac` and `outline`. (Support for more will come soon)
@@ -33,12 +38,16 @@ function Component {
         type=""
         angleX=""
         angleY=""
+        shadow=""
+        border=""
         color=""
       />
     </>
   )
 }
 ```
+
+*You can insert 'none' in the `shadow` and `border` properties if you don't want a drop shadow or a border.
 
 ## License
 
