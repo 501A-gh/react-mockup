@@ -8,13 +8,20 @@ const App = () => {
     <>
       <MobileMockup
         size="1"
-        src="" />
+        src=""
+        // angleX="5deg"
+        // angleY="10deg"
+        // shadow="none"
+        border="none"
+      />
       <BrowserMockup
         src=""
-        type=""
-        angleX="5deg"
-        angleY="10deg"
-        color="white"
+        type="outline"
+        // angleX="5deg"
+        // angleY="10deg"
+        shadow="none"
+        border="none"
+        color="black"
       />
     </>
   )
