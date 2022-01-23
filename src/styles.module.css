@@ -5,46 +5,79 @@
   --grey2: rgb(201, 201, 201);
 }
 
-.browser {
+.browser,
+.window {
   border-radius: 10px;
   height: min-content;
 }
-.browser img {
+.browser img,
+.window img{
   padding: 0;
   margin: 0;
   width: 100%;
   border-radius: 0px 0px 10px 10px;
 }
 
-.browserHeader {
+.browserHeader,
+.windowHeader{
   border-radius: 10px 10px 0px 0px;
   background-color: var(--grey1);
-  height: 35px;
   width: auto;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgb(172, 172, 172);
 }
-.browserHeader div {
+.browserHeader {
+  height: 45px;
+  justify-content: space-between;
+}
+.windowHeader{
+  height: 35px;
+}
+.browserButtons,
+.windowHeader,
+.browserSearchBar span{
+  display: flex;
+  align-items: center;
+}
+.browserButtons div,
+.windowHeader div{
   border-radius: 50px;
   width: 15px;
   height: 15px;
   margin-left: 10px;
   background-color: grey;
 }
+.browserSearchBar{
+  background-color:white;
+  border-radius: 5px;
+  padding: 0.3em 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
 
 /* types */
-.mac .browserHeader div:first-child {
+.browserButtons span,
+.windowHeader span{
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+.mac .browserButtons div:first-child,
+.mac .windowHeader div:first-child  {
   background-color: #ff605c;
 }
-.mac .browserHeader div {
+.mac .browserButtons div,
+.mac .windowHeader div  {
   background-color: #ffbd44;
 }
-.mac .browserHeader div:last-child {
+.mac .browserButtons div:last-child,
+.mac .windowHeader div:last-child{ 
   background-color: #00ca4e;
 }
 
-.outline .browserHeader div {
+.outline .browserButtons div,
+.outline .windowHeader div {
   border: 2px solid grey;
   background-color: transparent;
 }

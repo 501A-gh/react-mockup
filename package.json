@@ -1,6 +1,6 @@
 {
   "name": "react-mockup",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create mockups with a single react component",
   "author": "",
   "license": "MIT",
@@ -56,7 +56,9 @@
   "directories": {
     "example": "example"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-icons": "^4.3.1"
+  },
   "keywords": [
     "react"
   ]

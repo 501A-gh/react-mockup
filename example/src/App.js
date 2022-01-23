@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { MobileMockup, BrowserMockup } from 'react-mockup'
+import { MobileMockup, WindowMockup, BrowserMockup } from 'react-mockup'
 import 'react-mockup/dist/index.css'
 
 const App = () => {
@@ -14,13 +14,25 @@ const App = () => {
         // shadow="none"
         border="none"
       />
-      <BrowserMockup
+      <WindowMockup
         src=""
-        type="outline"
+        type="chrome"
         // angleX="5deg"
         // angleY="10deg"
+        // buttonColor="white"
         shadow="none"
-        border="none"
+        // border="none"
+        color="white"
+      />
+      <BrowserMockup
+        src=""
+        type="chrome"
+        // angleX="5deg"
+        // angleY="10deg"
+        accentColor="orange"
+        urlValue="prattle.vercel.app"
+        // shadow="none"
+        // border="none"
         color="black"
       />
     </>
