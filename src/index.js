@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
-import { MdClose, MdMinimize, MdCropSquare, MdRefresh, MdOutlineMoreVert } from "react-icons/md";
+import { MdRefresh, MdOutlineMoreVert } from "react-icons/md";
+import WindowControl from './lib/WindowControl';
 
 const MobileMockup = ({ src, size, angleX, angleY, border, shadow }) => {
   return (
@@ -22,7 +23,7 @@ const MobileMockup = ({ src, size, angleX, angleY, border, shadow }) => {
   )
 };
 
-const WindowMockup = ({ src, color, type, angleX, angleY, border, shadow, accentColor }) => {
+const WindowMockup = ({ src, color, type, angleX, angleY, border, shadow, accentColor, windowName, windowControlPosition }) => {
   return (
     <div
       className={`
@@ -31,36 +32,40 @@ const WindowMockup = ({ src, color, type, angleX, angleY, border, shadow, accent
       `}
       style={{
         boxShadow: `${shadow ? shadow : '0px 5px 15px var(--grey2)'}`,
-        border: `${border ? border : '1px solid rgb(172, 172, 172)'}`,
+        border: `${border ? border : `1px solid ${accentColor}`}`,
         transform: `
           perspective(200px) 
           rotateX(${angleX}) 
           rotateY(${angleY})
         `
       }}>
-      <div className={styles.windowHeader} style={{ backgroundColor: `${color}` }}>
-        {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
-        {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
-        {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
-
-        {type === 'chrome' && <span style={{ color: accentColor }}><MdMinimize /></span>}
-        {type === 'chrome' && <span style={{ color: accentColor }}><MdCropSquare /></span>}
-        {type === 'chrome' && <span style={{ color: accentColor }}><MdClose /></span>}
-
-        {type === 'mac' && <div></div>}
-        {type === 'mac' && <div></div>}
-        {type === 'mac' && <div></div>}
-
-        {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
-        {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
-        {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
+      <div className={styles.windowHeader} style={{ backgroundColor: `${color}`, borderBottom: `1px solid ${accentColor}` }}>
+        {windowControlPosition === 'left' ?
+          <WindowControl
+            type={type}
+            wrapperClassName={styles.windowControlButtons}
+            color={color}
+            accentColor={accentColor}
+          /> :
+          <br />
+        }
+        <p>{windowName}</p>
+        {windowControlPosition === 'right' ?
+          <WindowControl
+            type={type}
+            wrapperClassName={styles.windowControlButtons}
+            color={color}
+            accentColor={accentColor}
+          /> :
+          <br />
+        }
       </div>
       <img src={src} />
     </div>
   )
 };
 
-const BrowserMockup = ({ src, color, type, angleX, angleY, border, shadow, accentColor, urlValue }) => {
+const BrowserMockup = ({ src, color, type, angleX, angleY, border, shadow, accentColor, urlValue, windowControlPosition }) => {
   return (
     <div
       className={`
@@ -69,31 +74,23 @@ const BrowserMockup = ({ src, color, type, angleX, angleY, border, shadow, accen
       `}
       style={{
         boxShadow: `${shadow ? shadow : '0px 5px 15px var(--grey2)'}`,
-        border: `${border ? border : '1px solid rgb(172, 172, 172)'}`,
+        border: `${border ? border : `1px solid ${accentColor}`}`,
         transform: `
           perspective(200px) 
           rotateX(${angleX}) 
           rotateY(${angleY})
         `
       }}>
-      <div className={styles.browserHeader} style={{ backgroundColor: `${color}` }}>
-        <div className={styles.browserButtons}>
-          {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
-          {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
-          {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
-
-          {type === 'chrome' && <span style={{ color: accentColor }}><MdMinimize /></span>}
-          {type === 'chrome' && <span style={{ color: accentColor }}><MdCropSquare /></span>}
-          {type === 'chrome' && <span style={{ color: accentColor }}><MdClose /></span>}
-
-          {type === 'mac' && <div></div>}
-          {type === 'mac' && <div></div>}
-          {type === 'mac' && <div></div>}
-
-          {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
-          {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
-          {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
-        </div>
+      <div className={styles.browserHeader} style={{ backgroundColor: `${color}`, borderBottom: `1px solid ${accentColor}` }}>
+        {windowControlPosition === "left" ?
+          <WindowControl
+            type={type}
+            wrapperClassName={styles.windowControlButtons}
+            color={color}
+            accentColor={accentColor}
+          /> :
+          <br />
+        }
         <div
           className={styles.browserSearchBar}
           style={{ backgroundColor: accentColor, color: color }}
@@ -102,7 +99,15 @@ const BrowserMockup = ({ src, color, type, angleX, angleY, border, shadow, accen
           {urlValue ? urlValue : "react-mockup"}
           <span style={{ color: color }}><MdOutlineMoreVert /></span>
         </div>
-        <div></div>
+        {windowControlPosition === "right" ?
+          <WindowControl
+            type={type}
+            wrapperClassName={styles.windowControlButtons}
+            color={color}
+            accentColor={accentColor}
+          /> :
+          <br />
+        }
       </div>
       <img src={src} />
     </div>

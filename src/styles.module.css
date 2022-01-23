@@ -21,31 +21,30 @@
 .browserHeader,
 .windowHeader{
   border-radius: 10px 10px 0px 0px;
-  background-color: var(--grey1);
+  padding: 0 10px;
   width: auto;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgb(172, 172, 172);
+  justify-content: space-between;
 }
 .browserHeader {
   height: 45px;
-  justify-content: space-between;
 }
 .windowHeader{
   height: 35px;
 }
-.browserButtons,
-.windowHeader,
+/* .browserButtons,
+.windowHeader, */
 .browserSearchBar span{
   display: flex;
   align-items: center;
 }
-.browserButtons div,
-.windowHeader div{
+.windowControlButtons div{
   border-radius: 50px;
   width: 15px;
   height: 15px;
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .browserSearchBar{
   background-color:white;
@@ -57,21 +56,17 @@
 }
 
 /* types */
-.browserButtons span,
-.windowHeader span{
+.windowControlButtons span{
   font-weight: bold;
   margin-left: 0.5em;
 }
-.mac .browserButtons div:first-child,
-.mac .windowHeader div:first-child  {
+.mac .windowControlButtons div:first-child{
   background-color: #ff605c;
 }
-.mac .browserButtons div,
-.mac .windowHeader div  {
+.mac .windowControlButtons div{
   background-color: #ffbd44;
 }
-.mac .browserButtons div:last-child,
-.mac .windowHeader div:last-child{ 
+.mac .windowControlButtons div:last-child{ 
   background-color: #00ca4e;
 }
 

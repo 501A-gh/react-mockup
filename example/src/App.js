@@ -16,21 +16,24 @@ const App = () => {
       />
       <WindowMockup
         src=""
-        // type=""
+        type="chrome"
+        windowControlPosition="right"
         // angleX="5deg"
         // angleY="10deg"
         accentColor="black"
         shadow="none"
+        windowName="react-mockup-example"
         // border="none"
         color="white"
       />
       <BrowserMockup
         src=""
-        // type=""
+        type="default"
+        windowControlPosition="right"
         // angleX="5deg"
         // angleY="10deg"
         accentColor="black"
-        urlValue="prattle.vercel.app"
+        urlValue="react-mockup-example"
         // shadow="none"
         // border="none"
         color="white"

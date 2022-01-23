@@ -34,6 +34,7 @@ function App {
       <BrowserMockup
         src=""
         type="chrome"
+        windowControlPosition="right"
         angleX="5deg"
         angleY="10deg"
         accentColor="orange"
@@ -52,19 +53,22 @@ function App {
 | Properties | What to insert |
 | -------- | ---- |
 | src | The image of what you want to display in the mockup |
-| type | Button aesthetics (Currently accepts three types 'mac', 'chrome' and 'outline') |
+| type | Button aesthetics (Currently accepts 4 types 'default', 'mac', 'chrome' and 'outline') |
 | angleX | X angle of the mockup |
 | angleY | Y angle of the mockup |
 | shadow | Mockups `box-shadow` property. (Set as 'none' if you do not want to set anything) |
 | border | Mockups `border` property. (Set as 'none' if you do not want to set anything) |
 | color | The browser mockups head color |
 | accentColor | The color of the buttons (when selected 'chrome' as types) |
+| windowName | The display name of the window mockup |
+| windowControlPosition | 'right' or 'left' |
+
 
 ### 🖱️ Browser Mockup
 | Properties | What to insert |
 | -------- | ---- |
 | src | The image of what you want to display in the mockup |
-| type | Button aesthetics (Currently accepts three types 'mac', 'chrome' and 'outline') |
+| type | Button aesthetics (Currently accepts 4 types 'default', 'mac', 'chrome' and 'outline') |
 | angleX | X angle of the mockup |
 | angleY | Y angle of the mockup |
 | shadow | Mockups `box-shadow` property. (Set as 'none' if you do not want to set anything) |
@@ -72,6 +76,7 @@ function App {
 | color | The browser mockups head color |
 | accentColor | The color of the buttons (when selected 'chrome' as types) and the color of the search bar |
 | urlValue | The displayed URL value stored in the browser mockup  |
+| windowControlPosition | 'right' or 'left' |
 
 ### 📱 Mobile Mockup [Beta]
 | Properties | What to insert |
