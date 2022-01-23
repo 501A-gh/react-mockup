@@ -2,7 +2,7 @@
 :root {
   --grey0: rgb(245, 245, 245);
   --grey1: rgb(214, 214, 214);
-  --grey2: rgb(201, 201, 201);
+  --grey2: rgb(201, 201, 201); 
 }
 
 .browser,
@@ -46,7 +46,6 @@
   width: 15px;
   height: 15px;
   margin-left: 10px;
-  background-color: grey;
 }
 .browserSearchBar{
   background-color:white;
@@ -74,12 +73,6 @@
 .mac .browserButtons div:last-child,
 .mac .windowHeader div:last-child{ 
   background-color: #00ca4e;
-}
-
-.outline .browserButtons div,
-.outline .windowHeader div {
-  border: 2px solid grey;
-  background-color: transparent;
 }
 
 .iphone1 img {

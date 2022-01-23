@@ -39,9 +39,21 @@ const WindowMockup = ({ src, color, type, angleX, angleY, border, shadow, accent
         `
       }}>
       <div className={styles.windowHeader} style={{ backgroundColor: `${color}` }}>
-        {type === 'chrome' ? <span style={{ color: accentColor }}><MdMinimize /></span> : <div></div>}
-        {type === 'chrome' ? <span style={{ color: accentColor }}><MdCropSquare /></span> : <div></div>}
-        {type === 'chrome' ? <span style={{ color: accentColor }}><MdClose /></span> : <div></div>}
+        {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
+        {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
+        {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
+
+        {type === 'chrome' && <span style={{ color: accentColor }}><MdMinimize /></span>}
+        {type === 'chrome' && <span style={{ color: accentColor }}><MdCropSquare /></span>}
+        {type === 'chrome' && <span style={{ color: accentColor }}><MdClose /></span>}
+
+        {type === 'mac' && <div></div>}
+        {type === 'mac' && <div></div>}
+        {type === 'mac' && <div></div>}
+
+        {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
+        {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
+        {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
       </div>
       <img src={src} />
     </div>
@@ -66,11 +78,26 @@ const BrowserMockup = ({ src, color, type, angleX, angleY, border, shadow, accen
       }}>
       <div className={styles.browserHeader} style={{ backgroundColor: `${color}` }}>
         <div className={styles.browserButtons}>
-          {type === 'chrome' ? <span style={{ color: accentColor }}><MdMinimize /></span> : <div></div>}
-          {type === 'chrome' ? <span style={{ color: accentColor }}><MdCropSquare /></span> : <div></div>}
-          {type === 'chrome' ? <span style={{ color: accentColor }}><MdClose /></span> : <div></div>}
+          {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
+          {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
+          {type === undefined && <div style={{ backgroundColor: accentColor }}></div>}
+
+          {type === 'chrome' && <span style={{ color: accentColor }}><MdMinimize /></span>}
+          {type === 'chrome' && <span style={{ color: accentColor }}><MdCropSquare /></span>}
+          {type === 'chrome' && <span style={{ color: accentColor }}><MdClose /></span>}
+
+          {type === 'mac' && <div></div>}
+          {type === 'mac' && <div></div>}
+          {type === 'mac' && <div></div>}
+
+          {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
+          {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
+          {type === 'outline' && <div style={{ border: `1px solid ${accentColor}` }}></div>}
         </div>
-        <div className={styles.browserSearchBar} style={{ backgroundColor: accentColor }}>
+        <div
+          className={styles.browserSearchBar}
+          style={{ backgroundColor: accentColor, color: color }}
+        >
           <span style={{ color: color }}><MdRefresh /></span>
           {urlValue ? urlValue : "react-mockup"}
           <span style={{ color: color }}><MdOutlineMoreVert /></span>
