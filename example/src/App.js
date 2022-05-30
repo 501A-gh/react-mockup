@@ -33,7 +33,6 @@ const App = () => {
         windowName="react-mockup-example"
         // border="none"
         color="white"
-        frameStyle={frameStyle}
       />
       <BrowserMockup
         src="https://storage.googleapis.com/zenn-user-upload/29e86a5c29f0-20220527.png"

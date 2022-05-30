@@ -34,7 +34,7 @@ function App {
     padding:'20px',
     borderRadius:'20px',
   }
-  
+
   return(
     <>
       <h1>React Mockup!</h1>
@@ -68,7 +68,6 @@ function App {
 | border | Mockups `border` property. (Set as 'none' if you do not want to set anything) |
 | color | The mockups head color |
 | accentColor | The color of the buttons |
-| frameStyle | Freely insert your original styles a `div` that wraps the mockup component |
 
 ### 💻 Window Mockup
 | Properties | What to insert |
@@ -79,6 +78,7 @@ function App {
 ### 🖱️ Browser Mockup
 | Properties | What to insert |
 | -------- | ---- |
+| frameStyle | Freely insert your original styles a `div` that wraps the mockup component |
 | urlValue | The displayed URL value stored in the browser mockup  |
 | windowControlPosition | 'right' or 'left' |
 
