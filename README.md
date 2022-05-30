@@ -10,9 +10,8 @@ react-mockup lets you create simple mockups with a single react component. This 
 - `<BrowserMockup/>`
 - `<MobileMockup/>`
 
-<!-- react-mockup also provides a web editor that allows you to customize your mockup visually without needing to fiddle around with the props. (The editor will generate the nessacary react-mockup component for you).
-
-[Visit Editor]() -->
+react-mockup also provides a web editor that is still currently under development that allows you to customize your mockup visually without needing to fiddle around with the props. (The editor will generate the nessacary react-mockup component for you).
+[Visit Editor](https://react-mockup-editor.vercel.app/)
 
 ## Install
 
@@ -28,6 +27,14 @@ import {BrowserMockup} from 'react-mockup'
 import 'react-mockup/dist/index.css'
 
 function App {
+  const frameStyle={
+    backdropFilter: 'blur(16px)',
+    background:'radial-gradient(86.36% 107.55% at 6.49% 12.32%,rgba(255, 255, 255, 0.5) 0%,rgba(255, 255, 255, 0.5) 100%)',
+    border:'1px solid rgba(228, 228, 228, 0.3)',
+    padding:'20px',
+    borderRadius:'20px',
+  }
+  
   return(
     <>
       <h1>React Mockup!</h1>
@@ -42,6 +49,7 @@ function App {
         shadow="none"
         border="none"
         color="black"
+        frameStyle={frameStyle}
       />
     </>
   )
@@ -49,7 +57,7 @@ function App {
 ```
 
 ## Component Specific Properties
-### 💻 Window Mockup
+### 💻 Window & 🖱️ Browser Mockup
 | Properties | What to insert |
 | -------- | ---- |
 | src | The image of what you want to display in the mockup |
@@ -58,23 +66,19 @@ function App {
 | angleY | Y angle of the mockup |
 | shadow | Mockups `box-shadow` property. (Set as 'none' if you do not want to set anything) |
 | border | Mockups `border` property. (Set as 'none' if you do not want to set anything) |
-| color | The browser mockups head color |
-| accentColor | The color of the buttons (when selected 'chrome' as types) |
+| color | The mockups head color |
+| accentColor | The color of the buttons |
+| frameStyle | Freely insert your original styles a `div` that wraps the mockup component |
+
+### 💻 Window Mockup
+| Properties | What to insert |
+| -------- | ---- |
 | windowName | The display name of the window mockup |
 | windowControlPosition | 'right' or 'left' |
-
 
 ### 🖱️ Browser Mockup
 | Properties | What to insert |
 | -------- | ---- |
-| src | The image of what you want to display in the mockup |
-| type | Button aesthetics (Currently accepts 4 types 'default', 'mac', 'chrome' and 'outline') |
-| angleX | X angle of the mockup |
-| angleY | Y angle of the mockup |
-| shadow | Mockups `box-shadow` property. (Set as 'none' if you do not want to set anything) |
-| border | Mockups `border` property. (Set as 'none' if you do not want to set anything) |
-| color | The browser mockups head color |
-| accentColor | The color of the buttons (when selected 'chrome' as types) and the color of the search bar |
 | urlValue | The displayed URL value stored in the browser mockup  |
 | windowControlPosition | 'right' or 'left' |
 

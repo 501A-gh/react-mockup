@@ -23,8 +23,21 @@ const MobileMockup = ({ src, size, angleX, angleY, border, shadow }) => {
   )
 };
 
-const WindowMockup = ({ src, color, type, angleX, angleY, border, shadow, accentColor, windowName, windowControlPosition }) => {
+const WindowMockup = ({src, color, type, angleX, angleY, border, shadow, accentColor, windowName, windowControlPosition }) => {
   return (
+    <div
+      style={
+        Object.assign(
+          {
+            transform: `
+              perspective(200px) 
+              rotateX(${angleX}) 
+              rotateY(${angleY})
+            `,
+          }
+        )
+      }
+    >
     <div
       className={`
         ${styles.window}
@@ -33,11 +46,11 @@ const WindowMockup = ({ src, color, type, angleX, angleY, border, shadow, accent
       style={{
         boxShadow: `${shadow ? shadow : '0px 5px 15px var(--grey2)'}`,
         border: `${border ? border : `1px solid ${accentColor}`}`,
-        transform: `
-          perspective(200px) 
-          rotateX(${angleX}) 
-          rotateY(${angleY})
-        `
+        // transform: `
+        //   perspective(200px) 
+        //   rotateX(${angleX}) 
+        //   rotateY(${angleY})
+        // `
       }}>
       <div className={styles.windowHeader} style={{ backgroundColor: `${color}`, borderBottom: `1px solid ${accentColor}` }}>
         {windowControlPosition === 'left' ?
@@ -62,24 +75,26 @@ const WindowMockup = ({ src, color, type, angleX, angleY, border, shadow, accent
       </div>
       <img src={src} />
     </div>
+    </div>
+
   )
 };
 
-const BrowserMockup = ({ frameData, src, color, type, angleX, angleY, border, shadow, accentColor, urlValue, windowControlPosition }) => {
+const BrowserMockup = ({ frameStyle, src, color, type, angleX, angleY, border, shadow, accentColor, urlValue, windowControlPosition }) => {
   return (
     <div
-      style={{
-        backdropFilter: `${frameData ? frameData.backdropFilter : 'blur(16px)'}`,
-        background:`${frameData ? frameData.background : 'radial-gradient(86.36% 107.55% at 6.49% 12.32%,rgba(255, 255, 255, 0.5) 0%,rgba(255, 255, 255, 0.5) 100%)'}`,
-        border:`${frameData ? frameData.border : '1px solid rgba(228, 228, 228, 0.3)'}`,
-        padding:`${frameData ? frameData.size : '10px'}`,
-        borderRadius:`${frameData ? frameData.borderRadius : '20px'}`,
-        transform: `
-          perspective(200px) 
-          rotateX(${angleX}) 
-          rotateY(${angleY})
-        `
-      }}
+      style={
+        Object.assign(
+          frameStyle,
+          {
+            transform: `
+              perspective(200px) 
+              rotateX(${angleX}) 
+              rotateY(${angleY})
+            `
+          }
+        )
+      }
     >
       <div
         className={`
